@@ -5,6 +5,7 @@ import android.graphics.Color
 import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.helper.ItemTouchHelper
 import cn.xwj.recyclerviewtest.safeCall
+import kotlin.math.absoluteValue
 
 /**
  * Author: xw
@@ -45,13 +46,21 @@ class ItemTouchCallBack(private val listener: ItemTouchListener) : ItemTouchHelp
                              dX: Float, dY: Float, actionState: Int, isCurrentlyActive: Boolean) {
         viewHolder.safeCall {
             if (actionState == ItemTouchHelper.ACTION_STATE_SWIPE) {
-                val alpha = 1 - dX / itemView.width * 0.3f
-                itemView.scaleX = alpha
-                itemView.scaleY = alpha
-                itemView.alpha = alpha
+                if (dX.absoluteValue <= itemView.width / 2) {
+                    val alpha = 1 - dX.absoluteValue / itemView.width
+                    itemView.scaleX = alpha
+                    itemView.scaleY = alpha
+                    itemView.alpha = alpha
+                    itemView.translationX = -0.5f*itemView.width
+                } else {
+                    itemView.scaleX = 1f
+                    itemView.scaleY = 1f
+                    itemView.alpha = 1f
+                    itemView.translationX = dX
+                }
             }
         }
-        super.onChildDraw(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive)
+//        super.onChildDraw(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive)
     }
 
     override fun clearView(recyclerView: RecyclerView?, viewHolder: RecyclerView.ViewHolder?) {
