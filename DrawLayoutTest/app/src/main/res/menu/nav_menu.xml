@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/mMenu1"
+        android:icon="@mipmap/ic_launcher"
+        android:title="Menu1"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/mMenu2"
+        android:icon="@mipmap/ic_launcher"
+        android:title="Menu2"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/mMenu3"
+        android:icon="@mipmap/ic_launcher"
+        android:title="Menu3"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/mMenu4"
+        android:icon="@mipmap/ic_launcher"
+        android:title="Menu4"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/mMenu5"
+        android:title="@string/app_name">
+        <menu>
+            <item
+                android:id="@+id/mMenu6"
+                android:title="Menu6" />
+
+            <item
+                android:id="@+id/mMenu7"
+                android:title="Menu7" />
+        </menu>
+    </item>
+</menu>

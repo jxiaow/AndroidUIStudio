@@ -1,0 +1,28 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <!--<item name="colorPrimary">@color/colorPrimary</item>-->
+        <!--<item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+        <!--<item name="colorAccent">@color/colorAccent</item>-->
+        <item name="colorPrimary">#D33A31</item>
+        <item name="colorPrimaryDark">#D33A31</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:textColorSecondary">#ffffff</item>
+    </style>
+
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Widget.SearchView" parent="Widget.AppCompat.SearchView">
+        <!--修改搜索框提示文字-->
+        <item name="defaultQueryHint">搜索本地歌曲</item>
+        <!--修改打开搜索框的搜索按钮的图标-->
+        <item name="searchIcon">@drawable/m5</item>
+        <!--修改搜索框左边的搜索按钮图标-->
+        <item name="searchHintIcon">@null</item>
+    </style>
+</resources>

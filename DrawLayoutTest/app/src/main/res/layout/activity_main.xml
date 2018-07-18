@@ -19,7 +19,8 @@
     <android.support.v4.widget.DrawerLayout
         android:id="@+id/mDrawLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent">
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -33,20 +34,13 @@
                 android:text="我是内容" />
         </FrameLayout>
 
-        <FrameLayout
+        <android.support.design.widget.NavigationView
+            android:id="@+id/mNav"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="start"
-            android:background="@color/colorPrimaryDark">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:text="我是菜单" />
-
-        </FrameLayout>
+            app:headerLayout="@layout/header_layout"
+            app:menu="@menu/nav_menu" />
 
     </android.support.v4.widget.DrawerLayout>
 

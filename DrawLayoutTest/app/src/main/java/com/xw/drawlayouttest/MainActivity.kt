@@ -1,5 +1,6 @@
 package com.xw.drawlayouttest
 
+import android.graphics.Color
 import android.os.Bundle
 import android.support.v4.widget.DrawerLayout
 import android.support.v7.app.AppCompatActivity
@@ -34,6 +35,13 @@ class MainActivity : AppCompatActivity() {
         }
         mDrawerListener = MyDrawerListener()
         mDrawLayout.addDrawerListener(mDrawerListener)
+        mDrawLayout.setScrimColor(Color.RED)
+        mNav.itemTextColor = null
+        mNav.itemIconTintList = null
+        //菜单点击事件
+        mNav.setNavigationItemSelectedListener {
+            return@setNavigationItemSelectedListener true
+        }
     }
 
     override fun onDestroy() {
@@ -49,22 +57,17 @@ class MainActivity : AppCompatActivity() {
         override fun onDrawerSlide(drawerView: View, slideOffset: Float) {
             //滑动的过程中调用的方法
 
-            val menu = drawerView
             val scale = 1 - slideOffset//1~0
+            drawerView.alpha = 1 - scale
             val leftScale = (1 - 0.3 * scale).toFloat()
-            val rightScale = (0.7f + 0.3 * scale).toFloat()//0.7~1
-            menu.scaleX = leftScale//1~0.7
-            menu.scaleY = leftScale//1~0.7
-//
-//            content.setScaleX(rightScale)
-//            content.setScaleY(rightScale)
-//            content.setTranslationX(menu.measuredWidth * (1 - scale))//0~width
+            drawerView.scaleX = leftScale//1~0.7
+            drawerView.scaleY = leftScale//1~0.7
+
 
         }
 
         override fun onDrawerClosed(drawerView: View) {
             //关闭时调用的方法
-
         }
 
         override fun onDrawerOpened(drawerView: View) {
