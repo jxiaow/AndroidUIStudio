@@ -23,7 +23,7 @@ class NewsViewPager(private val fm: FragmentManager) : FragmentPagerAdapter(fm) 
 
     override fun getItem(position: Int): Fragment {
 
-        val fragment = Fragment()
+        val fragment = NewsFragment()
         val bundle = Bundle()
         bundle.putString("title", getPageTitle(position).toString())
         fragment.arguments = bundle

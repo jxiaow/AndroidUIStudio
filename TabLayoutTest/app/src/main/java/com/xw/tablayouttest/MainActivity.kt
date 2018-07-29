@@ -25,5 +25,6 @@ class MainActivity : AppCompatActivity() {
         })
 
         viewPager.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(mTabLayout))
+        mTabLayout.setTabsFromPagerAdapter(viewPager.adapter)
     }
 }
