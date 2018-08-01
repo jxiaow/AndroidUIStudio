@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/mTV1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="left"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:onClick="click"
+                android:text="被观察者"
+                android:textColor="#fff" />
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="left"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:onClick="click"
+                android:text="被观察者"
+                android:textColor="#fff" />
+
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="left"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:onClick="click"
+                android:text="被观察者"
+                android:textColor="#fff" />
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="left"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:onClick="click"
+                android:text="被观察者"
+                android:textColor="#fff" />
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="left"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:onClick="click"
+                android:text="被观察者"
+                android:textColor="#fff" />
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="left"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:onClick="click"
+                android:text="被观察者"
+                android:textColor="#fff" />
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="left"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:onClick="click"
+                android:text="被观察者"
+                android:textColor="#fff" />
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="left"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:onClick="click"
+                android:text="被观察者"
+                android:textColor="#fff" />
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="left"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:onClick="click"
+                android:text="被观察者"
+                android:textColor="#fff" />
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="left"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:onClick="click"
+                android:text="被观察者"
+                android:textColor="#fff" />
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="left"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:onClick="click"
+                android:text="被观察者"
+                android:textColor="#fff" />
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        app:layout_behavior="cn.xwj.custombehavior.SyncScrollBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/mTV2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="right"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:text="观察者"
+                android:textColor="#fff"
+                app:layout_behavior="cn.xwj.custombehavior.CustomBehavior" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="right"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:text="观察者"
+                android:textColor="#fff" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="right"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:text="观察者"
+                android:textColor="#fff" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="right"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:text="观察者"
+                android:textColor="#fff" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="right"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:text="观察者"
+                android:textColor="#fff" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="right"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:text="观察者"
+                android:textColor="#fff" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="right"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:text="观察者"
+                android:textColor="#fff" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="right"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:text="观察者"
+                android:textColor="#fff" />
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>
