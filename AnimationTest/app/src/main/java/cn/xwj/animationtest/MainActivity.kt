@@ -1,6 +1,5 @@
 package cn.xwj.animationtest
 
-import android.animation.AnimatorListenerAdapter
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
 import android.os.Bundle
@@ -14,43 +13,39 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
-        mIV.setOnClickListener {
-            //补间动画
-//            val loadAnimation = AnimationUtils.loadAnimation(this, R.anim.set)
-//            it.startAnimation(loadAnimation)
-//            val view = it
-//            val animation = ObjectAnimator.ofFloat(it, "scaleX", 1.0f, 0.5f, 0.7f)
-//            animation.addUpdateListener({
-//                view.scaleY = it.animatedValue.toString().toFloat()
-//                Log.d("TAG", "animatedFraction: ${it.animatedFraction}, animatedValue: ${it.animatedValue} duration: ${it.duration}")
-//            })
-//            animation.start()
+        mBtn.setOnClickListener {
+
+            /**
+             * 1）first_View动画：1.翻转动画；2.透明度动画；3.缩放动画
+             */
+
+            val firstRotation = ObjectAnimator.ofFloat(mFirstView, "rotationX", 0f, 25f)
+            firstRotation.duration = 300
 
 
-//            val translationX = PropertyValuesHolder.ofFloat("translationX", 0f, 200f)
-//            val scaleX = PropertyValuesHolder.ofFloat("scaleX", 1.0f, 0.5f, 0.7f)
-//            val scaleY = PropertyValuesHolder.ofFloat("scaleY", 1.0f, 0.5f, 0.7f)
-//            val alpha = PropertyValuesHolder.ofFloat("alpha", 1.0f, 0.5f)
-//
-//            val valuesHolder = ObjectAnimator.ofPropertyValuesHolder(it, translationX, scaleX, scaleY, alpha)
-//            valuesHolder.duration = 5000
-//            valuesHolder.addUpdateListener {
-//                Log.d("TAG", "animatedFraction: ${it.animatedFraction}, animatedValue: ${it.animatedValue} duration: ${it.duration}")
-//            }
-//            valuesHolder.start()
+            val firstAlpha = ObjectAnimator.ofFloat(mFirstView, "alpha", 1.0f, 0.8f)
+            firstAlpha.duration = 200
 
 
-            val translationX = ObjectAnimator.ofFloat(it, "translationX", 0f, 200f)
-            val scaleX = ObjectAnimator.ofFloat(it, "scaleX", 1.0f, 0.5f, 0.7f)
-            val scaleY = ObjectAnimator.ofFloat(it, "scaleY", 1.0f, 0.5f, 0.7f)
-            val alpha = ObjectAnimator.ofFloat(it, "alpha", 1.0f, 0.5f)
+            val firstScaleX = ObjectAnimator.ofFloat(mFirstView, "scaleX", 1.0f, 0.8f)
+            firstScaleX.duration = 300
+            val firstScaleY = ObjectAnimator.ofFloat(mFirstView, "scaleY", 1.0f, 0.8f)
+            firstScaleY.duration = 300
 
-            val animationSet = AnimatorSet()
-            animationSet.playTogether(translationX, scaleX, scaleY, alpha)
-            animationSet.duration = 5000
-            animationSet.start()
+            val firstRotationResume = ObjectAnimator.ofFloat(mFirstView, "rotationX", 25f, 0f)
+            firstRotationResume.duration = 200
+            firstRotationResume.startDelay = 200
 
 
+            val firstTranslationY = ObjectAnimator.ofFloat(mFirstView, "translationY", 0f, -0.1f * mFirstView.height)
+            firstTranslationY.duration = 200
+
+
+
+
+            val animatorSet = AnimatorSet()
+            animatorSet.playTogether(firstRotation, firstAlpha, firstScaleX, firstScaleY, firstRotationResume, firstTranslationY)
+            animatorSet.start()
         }
     }
 }
