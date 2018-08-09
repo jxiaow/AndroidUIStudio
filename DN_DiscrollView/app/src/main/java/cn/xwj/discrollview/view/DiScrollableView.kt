@@ -75,8 +75,8 @@ class DiScrollableView @JvmOverloads constructor(context: Context,
         }
     }
 
-    private fun isTranslationFrom(translationMask: Int): Boolean = scrollTranslation == translationMask
-            || scrollTranslation and translationMask == translationMask
+    private fun isTranslationFrom(translationMask: Int): Boolean = scrollTranslation != -1
+            && scrollTranslation and translationMask == translationMask
 
     override fun onResetDiScroll() {
         startAnimation(-1f)
