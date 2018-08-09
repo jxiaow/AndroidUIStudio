@@ -1,7 +1,6 @@
 package cn.xwj.discrollview.view
 
 import android.content.Context
-import android.support.v4.math.MathUtils.clamp
 import android.util.AttributeSet
 import android.widget.ScrollView
 
@@ -37,7 +36,7 @@ class DiScrollView @JvmOverloads constructor(context: Context,
         mContent?.let {
 
             for (i in 0 until it.childCount) {
-                val child = getChildAt(i)
+                val child = it.getChildAt(i)
                 if (child is DiScrollableInterface) {
 
                     val childTop = child.top
@@ -56,4 +55,7 @@ class DiScrollView @JvmOverloads constructor(context: Context,
         }
     }
 
+    private fun clamp(value: Float, min: Float, max: Float): Float {
+        return Math.max(Math.min(value, max), min)
+    }
 }
