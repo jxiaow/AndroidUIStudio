@@ -41,15 +41,16 @@ class SlideMenu @JvmOverloads constructor(
             mMenuWidth = mScreenWidth - mMenuPaddingRight
             mMenu?.layoutParams?.width = mMenuWidth
             mContent?.layoutParams?.width = mScreenWidth
+            isOnce = true
         }
         super.onMeasure(widthMeasureSpec, heightMeasureSpec)
     }
 
     override fun onLayout(changed: Boolean, l: Int, t: Int, r: Int, b: Int) {
-        if (changed) {
-            isOnce = true
-        }
         super.onLayout(changed, l, t, r, b)
+        if (changed) {
+            this.scrollTo(mMenuWidth, 0)
+        }
     }
 
     override fun onTouchEvent(ev: MotionEvent): Boolean {
